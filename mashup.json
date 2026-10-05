@@ -1,0 +1,154 @@
+{
+  "id": "sigf/readycraft",
+  "version": "1.0.0",
+  "name": "ReadyCraft",
+  "tagline": "Minecraft inside Ready or Not (single player): walk, build, break and take suspects down with Minecraft's weapons, taking bullets on Minecraft's hearts (SkyCraft's Fabric mod).",
+  "kind": "passthrough",
+  "games": [
+    {
+      "game": "readyornot",
+      "role": "host",
+      "label": "Ready or Not",
+      "engine": "Ready or Not (Unreal Engine 5.3.2, DirectX 12) + version.dll proxy and C++ mod DLL",
+      "apps": {
+        "steam": "1144200"
+      },
+      "builds": {
+        "steam": [
+          "24942528"
+        ]
+      },
+      "runtime": "Steam build 24942528 only"
+    },
+    {
+      "game": "minecraft",
+      "role": "guest",
+      "label": "Minecraft",
+      "mc": "26.3",
+      "loader": "fabric@0.19.5",
+      "java": "25"
+    }
+  ],
+  "requires": [
+    {
+      "id": "fabric-loader",
+      "version": "0.19.5"
+    },
+    {
+      "id": "fabric-api",
+      "version": "0.161.0+26.3",
+      "note": "in the Minecraft pack (downloaded from Modrinth)"
+    }
+  ],
+  "install": [
+    {
+      "game": "readyornot",
+      "strategy": "game-dir-snapshot",
+      "files": [
+        {
+          "src": "ReadyCraft.zip",
+          "dst": "{game}/ReadyOrNot/Binaries/Win64",
+          "root": "ReadyCraft",
+          "unpack": true,
+          "contents": [
+            {
+              "path": "ReadyCraft/README.txt",
+              "sha256": "b66f3e1ef6c30782f440e06cacca88dbbe4c4493dd9078e00a82daced907b544"
+            },
+            {
+              "path": "ReadyCraft/version.dll",
+              "sha256": "55e1c3932ae1637bd6310066d936b3a3f4f3d3b82273513430f0bc1036654398"
+            },
+            {
+              "path": "ReadyCraft/ReadyCraft.dll",
+              "sha256": "a1f590fc701d67f4b28dde785f147156c19b451925a7e0c1d33fe3ad7d7bc385"
+            },
+            {
+              "path": "ReadyCraft/ReadyCraft-source.zip",
+              "sha256": "0c51982a8c764f0f2ffcca89de32432834c1590f2dc6fcc359b3d54e243c30ba"
+            }
+          ],
+          "url": "https://github.com/Keel62155/Minecraft-X-Games/releases/download/1.0.0-ReadyCraft/ReadyCraft.zip",
+          "sha256": "0d86a55c95fd56287336b5f152cb74ff0b65419095e7371f191b8b51b2ffad34",
+          "size": 245015
+        }
+      ]
+    },
+    {
+      "game": "minecraft",
+      "strategy": "mrpack",
+      "pack": {
+        "src": "readycraft.mrpack",
+        "url": "https://github.com/SIGFAI/readycraft/releases/download/v1.0.0/readycraft.mrpack",
+        "sha256": "fcee2513ad4af97a16fdfa95ad52cb969bed7365a1def9bf60d548725fbb0032",
+        "size": 235702
+      }
+    }
+  ],
+  "launch": [
+    {
+      "game": "minecraft"
+    },
+    {
+      "game": "readyornot",
+      "args": [
+        "-slnoswapchainprovider"
+      ]
+    }
+  ],
+  "files": [
+    {
+      "name": "ReadyCraft.zip",
+      "url": "https://github.com/Keel62155/Minecraft-X-Games/releases/download/1.0.0-ReadyCraft/ReadyCraft.zip",
+      "sha256": "0d86a55c95fd56287336b5f152cb74ff0b65419095e7371f191b8b51b2ffad34",
+      "size": 245015
+    },
+    {
+      "name": "readycraft.mrpack",
+      "url": "https://github.com/SIGFAI/readycraft/releases/download/v1.0.0/readycraft.mrpack",
+      "sha256": "fcee2513ad4af97a16fdfa95ad52cb969bed7365a1def9bf60d548725fbb0032",
+      "size": 235702
+    }
+  ],
+  "source": {
+    "repo": "https://github.com/Keel62155/Minecraft-X-Games",
+    "license": "No license (upstream download) + MIT",
+    "upstream_license": null,
+    "fetch": "upstream",
+    "tag": "1.0.0-ReadyCraft",
+    "commit": "0d6e51bf7babc88a7f9cfe730594206bac1e6e71",
+    "hosted": "https://github.com/SIGFAI/readycraft",
+    "based_on": "https://github.com/chasmlol/SkyCraft",
+    "bundled": [
+      {
+        "name": "SkyCraft (Fabric mod)",
+        "version": "0.1.2",
+        "repo": "https://github.com/chasmlol/SkyCraft",
+        "commit": "bfcaf178524b92c2cdeb88e4ce0f13ef9ded6f32",
+        "license": "MIT"
+      }
+    ]
+  },
+  "media": {},
+  "built_by": {
+    "author": "Keel62155",
+    "authors": [
+      "Keel62155",
+      "chasmlol"
+    ],
+    "packaged_by": "SIGF"
+  },
+  "idea_by": "Keel62155",
+  "built_at": "2026-10-05T00:00:00.000Z",
+  "status": "beta",
+  "issues": "https://github.com/Keel62155/Minecraft-X-Games/issues",
+  "notes": [
+    "Ready or Not on Steam at build 24942528 (Unreal Engine 5.3.2) and Minecraft: Java Edition. After a game update the mod does nothing until a new release: press Restore until then.",
+    "Single player only: do not take it into public multiplayer.",
+    "Press Play: Minecraft starts first as the app's own Prism instance \"sigf-readycraft\" (SkyCraft's Fabric mod, Minecraft 26.3, Java 25), then Ready or Not with the launch option -slnoswapchainprovider. You do not need SkyCraft or Skyrim. Go into Singleplayer and wait about 30 seconds for Minecraft's hotbar.",
+    "If you start Ready or Not outside the app, add -slnoswapchainprovider to its Steam launch options first (Properties > General): without it the game crashes about 30 seconds in. NVIDIA Frame Generation is off with it; DLSS upscaling still works. Keep the game on DirectX 12 (its default).",
+    "version.dll and ReadyCraft.dll (with the author's README.txt and source zip) are installed into ReadyOrNot\\Binaries\\Win64, downloaded from the author's own release; Restore removes them.",
+    "Keys: F is the game's use key (doors, cuffing), hold Left Alt to be the officer for a moment, F10 gives the officer back to the game. Run one \"Minecraft X\" mod at a time. Log: %LOCALAPPDATA%\\ReadyCraft\\readycraft.log.",
+    "Early build, a handful of short runs on one PC. Known gaps: doors are not solid, blocks are drawn over everything, people do not flinch, your team cannot be hurt. Report bugs to the author on the upstream issue tracker."
+  ]
+}
