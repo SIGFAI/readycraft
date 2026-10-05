@@ -4,11 +4,11 @@
   "name": "ReadyCraft",
   "tagline": "Minecraft inside Ready or Not (single player): walk, build, break and take suspects down with Minecraft's weapons, taking bullets on Minecraft's hearts (SkyCraft's Fabric mod).",
   "how_to_play": [
-    "Play Ready or Not's missions as a Minecraft player: build, break and take suspects down with Minecraft weapons and TNT.",
-    "WASD, Space and Shift move, left click breaks or hits, right click places or uses, 1-9 hotbar, E inventory, O Minecraft menu.",
-    "F is the game's use key for doors, cuffing and evidence; hold Left Alt to be the officer briefly, F10 hands him back fully.",
-    "Press Play: Minecraft starts first, then Ready or Not. Go into Singleplayer and wait about 30 seconds for the hotbar.",
-    "Choose a mission at the briefing desk with F as usual."
+    "Minecraft takes over the officer: walk, build, break and take suspects down with Minecraft's weapons and TNT; the game's bullets come off your hearts.",
+    "Press Play: Minecraft starts first, then Ready or Not. Go into Singleplayer and wait about 30 seconds for Minecraft's hotbar.",
+    "Choose a mission at the briefing desk with F as usual. F is the game's use key (doors, cuffing, evidence), Esc pause.",
+    "WASD/Space/Shift move, left click break/hit, right click place/use, 1-9 hotbar, E inventory, T chat, F5 third person, O Minecraft menu.",
+    "Hold Left Alt to be the officer for a moment; F10 hands him back fully."
   ],
   "kind": "passthrough",
   "games": [
@@ -150,9 +150,7 @@
   "status": "beta",
   "issues": "https://github.com/Keel62155/Minecraft-X-Games/issues",
   "notes": [
-    "How it works: Minecraft runs hidden next to Ready or Not and takes over the officer: you walk, build, break and take suspects down with Minecraft's weapons and TNT inside the game's levels, and the game's bullets come off Minecraft's hearts. The officer's own guns are put away.",
-    "Press Play: Minecraft starts first, then Ready or Not with -slnoswapchainprovider. Go into Singleplayer and wait about 30 seconds: Minecraft's hotbar appears when it is ready. Choose a mission at the briefing desk with F as usual. You do not need SkyCraft or Skyrim.",
-    "Keys: WASD/Space/Shift move, left click break/hit, right click place/use, 1-9 hotbar, E inventory, T chat, F5 third person, O Minecraft menu. F is the game's use key (doors, cuffing, evidence), Esc pause. Hold Left Alt to be the officer for a moment; F10 hands him back fully.",
+    "Minecraft runs hidden next to Ready or Not and the officer's own guns are put away. You do not need SkyCraft or Skyrim.",
     "Ready or Not on Steam at build 24942528, on DirectX 12 (its default), and Minecraft: Java Edition. Starting it outside the app needs -slnoswapchainprovider in Steam launch options or it crashes about 30 s in. NVIDIA Frame Generation is off while it runs; DLSS upscaling works.",
     "Single player only: never take it into public multiplayer. After a game update the mod does nothing until a new release: press Restore until then. Run one \"Minecraft X\" mod at a time. Restore removes version.dll and ReadyCraft.dll from ReadyOrNot\\Binaries\\Win64.",
     "Early build, a few short runs on one PC. Known gaps: doors are not solid, blocks are drawn over everything, people do not flinch, your team cannot be hurt. Report bugs to the author on the upstream issue tracker with %LOCALAPPDATA%\\ReadyCraft\\readycraft.log."
