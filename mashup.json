@@ -3,6 +3,13 @@
   "version": "1.0.0",
   "name": "ReadyCraft",
   "tagline": "Minecraft inside Ready or Not (single player): walk, build, break and take suspects down with Minecraft's weapons, taking bullets on Minecraft's hearts (SkyCraft's Fabric mod).",
+  "how_to_play": [
+    "Play Ready or Not's missions as a Minecraft player: build, break and take suspects down with Minecraft weapons and TNT.",
+    "WASD, Space and Shift move, left click breaks or hits, right click places or uses, 1-9 hotbar, E inventory, O Minecraft menu.",
+    "F is the game's use key for doors, cuffing and evidence; hold Left Alt to be the officer briefly, F10 hands him back fully.",
+    "Press Play: Minecraft starts first, then Ready or Not. Go into Singleplayer and wait about 30 seconds for the hotbar.",
+    "Choose a mission at the briefing desk with F as usual."
+  ],
   "kind": "passthrough",
   "games": [
     {
